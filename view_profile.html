@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jqueryfile.js"></script>
+    <script src="../code.jquery.com_jquery-3.7.1.min.js"></script>
+    
+    <style>
+        .main{
+            display: flex;
+            flex-direction: row;
+           width: 100vw;
+           height: 100vh;
+           position: absolute;
+           background-color: lightgrey;
+           
+        }
+        
+        
+        .sub1{
+            position: relative;
+            width: 30%;
+            height: 43%;
+            border: 2px solid black;
+            padding: 10px;
+            margin-top: 200px;
+            margin-left: 5%;
+           
+        }
+        .sub2{
+            position: relative;
+            width: 70%;
+            margin-top: 11%;
+           
+
+        }
+        .sub2 div{
+            margin-left: 10%;
+            
+            
+        }
+        .move{
+            margin-left: 40px;
+        }
+        #btn{
+           
+            margin: 30px;
+            padding: 7px;
+            width: 90px;
+            cursor: pointer;
+            font-size: large;
+
+        }
+        #btn:hover{
+            background-color: cyan;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <a href="./home.html"><button id="btn">Home</button></a>
+        <div class="sub1"> <center><img src="https://tse1.mm.bing.net/th?id=OIP.XVQhw3zWkizu6LGmEvAmqwHaHa&pid=Api&P=0&h=180" alt="not found" width="80%" height="300px"></center></div>
+        <div class="sub2">
+       
+            <div><h1 class="move"> Name: <span ><p id="name"  style="display: inline; margin-left:100px ;border:2px solid black; padding-left:5px; padding-right: 5px;">N/A</p></span></h1> </div>
+            <div><h1> Blood group: <span ><p id="bgroup" style="display: inline; margin-left: 50px;border:2px solid black; padding-left:5px; margin-right: 5px;padding-right: 5px;">aaa</p></span></h1> </div>
+            <div><h1 class="move"> Email: <span ><p id="email" style="display: inline; margin-left: 98px; border:2px solid black; padding-left:5px; margin-right: 5px;padding-right: 5px;">bbb</p></span></h1> </div>
+            <div><h1 class="move"> Phone: <span ><p id="phone" style="display: inline; margin-left: 95px; border:2px solid black; padding-left:5px; margin-right: 5px;padding-right: 5px;">ccc</p></span></h1> </div>
+            <div><h1 class="move"> BOD: <span ><p id="bod" style="display: inline; margin-left: 110px;border:2px solid black; padding-left:5px; margin-right: 5px;padding-right: 5px;">ddd</p></span></h1> </div>
+            <div><h1 class="move"> HIV: <span ><p id="hiv" style="display: inline; margin-left: 123px;border:2px solid black; padding-left:5px; margin-right: 5px;padding-right: 5px;">NO</p></span></h1> </div>
+            
+      
+        
+        </div>
+    </div>
+    <script>
+        document.getElementById("name").innerHTML="Sai";
+    document.getElementById("bgroup").innerHTML="O+";
+    document.getElementById("email").innerHTML="kedaerisettysai440@gmail.com";
+    document.getElementById("phone").innerHTML="8074322004";
+    document.getElementById("bod").innerHTML="01/01/2003";
+    document.getElementById("hiv").innerHTML="NO";
+    </script>
+
+    
+    
+</body>
+</html>

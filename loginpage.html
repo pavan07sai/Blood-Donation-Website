@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../code.jquery.com_jquery-3.7.1.min.js"></script>
+    <link rel="icon" href="../HTML logo.png">
+    <script src="../jqueryfile.js"></script>
+    
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("./blood.jpg");
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        form{
+            width: 350px;
+            height: 300px;
+            background-color: white;
+            margin: 0 auto;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            top: 20vh;
+            margin-top: 80px;
+            
+            border: black 3px solid;
+            border-style: groove;
+            background:white ;
+            box-shadow: 0px 0px 10px;
+        }
+        .detail{
+            width: 70%;
+            padding: 5px;
+            margin: 10px;
+            margin-bottom: 0px;
+            margin-top: 40px;
+            border-radius:10px ;
+        }
+        .btn1{
+            margin: 20px;
+            padding: 5px;
+            width: 90px;
+            border-radius: 10px;
+            background-color: brown;
+            color: white;
+            cursor: pointer;
+            
+        }
+        .small {
+            position: relative;
+            width: 100%;
+            background-color: rgb(159, 9, 9);
+            color: white;
+            height: 50px;
+            padding-top: 5px;
+           
+        }
+        .err{
+            color:red;
+            font-size:15px;
+        }
+    </style>
+    
+    <!-- <script>
+        function validationform(){
+            var name=document.forms["form"]["username"].value;
+            var password=document.forms["form"]["password"].value;
+
+            if(name.trim()=="sai"&&password.trim()=="sai123"){
+                
+                alert("successful login..");
+                return true;
+            }else if(name==""||password==""){
+                alert("please fill all the details....");
+                return false;
+            }else if(password.length<5){
+                alert("password length must be more 5 ...");
+                return false;
+            }
+            
+            else{
+                alert("incorrect username or password....");
+                return false;
+            }
+
+        }
+    </script> -->
+
+</head>
+<body>
+    <div class="large">
+        
+        <form name="myfile"   action="../blood_donate_website/home.html"   onsubmit="view_profile(search_details())" >
+            <div class="small">
+                <center><h1>Login</h1></center>
+        </div>
+          <label for=""> <input type="text" id="username" name="username" placeholder="Enter Username"  class="detail"><br> <span id="error" class="err"></span></label>
+    
+            <label><input type="password" id="password" name="password" placeholder="Enter Password"  class="detail" autocomplete="on"><br><span class="err" id="errorpass"></span></label><br><br>
+    
+            <input type="submit" name="submit" value="Login" id="submit"  class="btn1" title="submit" >
+            <!-- <a href="#"><input type="button" name="signup" value="SignUp" class="btn1" title="SignUp" ></a> -->
+    
+    
+        </form>
+    </div>
+    <!-- <script>
+        function search_details(){
+              var isValid=true;
+           if(document.myfile.username.value==""){
+                 document.getElementById("error").innerHTML="*please enter the name";
+                 isValid= false;
+            }
+             else{
+                 document.getElementById("error").innerHTML="";
+             }
+             if(document.myfile.password.value==""){
+                 document.getElementById("errorpass").innerHTML="*please enter the password";
+                 isValid= false;
+             }
+            else{
+                document.getElementById("errorpass").innerHTML="";
+            }
+            return isValid
+
+         }
+    </script> -->
+    
+    <script>
+         function search_details(){
+    
+
+    var username =document.getElementById("username").value;
+    var password =document.getElementById("password").value;
+
+    var user=localStorage.getItem(username);
+    var data=JSON.parse(user);
+    console.log(data);
+
+    if(user==null){
+        alert("username not found");
+        event.preventDefault();
+        return false;
+    }else if(username==data.username&&password==data.password){
+        return username;
+        alert("successfully login");
+        
+    }else{
+        alert("username or password is wrong...");
+        event.preventDefault();
+        return false;
+    }
+}
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+

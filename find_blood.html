@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../code.jquery.com_jquery-3.7.1.min.js"></script>
+    <style>
+      /* body{
+         background-image: url(./th\ \(1\).jpeg);
+         background-repeat: no-repeat;
+         background-size: cover;
+      } */
+            
+      #aa{
+         display: flex;
+         flex-direction: row;
+      }
+          .div1{
+         height:90px;
+         border: 2px solid black;
+         padding:10px;
+         padding-top:2px;
+         }
+      .maindiv{
+         width: 35%;
+         border: 5px rgb(241, 237, 237) solid;
+         //border-style: ridge;
+         margin: 20px auto 50px;
+         margin-left: 10%;
+         background-color: rgb(255, 251, 251);
+         padding: 10px;
+         box-shadow: 0px 0px 10px;
+      }
+
+      .maindiv input{
+         height: 35px;
+         background-color: transparent;
+         border: 0.5px solid rgb(225, 219, 213) ;
+         width: 200px;
+      }
+      .maindiv select{
+         height: 38px;
+         background-color: transparent;
+         border: 0.5px solid rgb(225, 219, 213) ;
+         
+      }
+      
+      #heading{
+         text-align: center!important;
+      }
+      #btn{
+        margin-top: 20px;
+         padding:6px ;
+         width: 180px;
+         background-color: transparent;
+         border: red 2px solid;
+         cursor: pointer;
+         font-size: large;
+         border-radius: 5px;
+      }
+      
+      #btn:hover{
+         background-color: red;
+         color: white;
+      }
+      h2{
+         font-size: larger;
+         font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+      }
+      #form{
+        margin-left: 10%;
+      }
+      .status{
+         width: 400px;
+         margin: 0px auto 0px;
+      }
+     
+     .homebtn input{
+      margin-top: 10px;
+      height: 20px;
+      width: 90px;
+      border-radius: 5px;
+      color: blue;
+     }
+     .homebtn input:hover{
+      background-color: rgb(187, 183, 183);
+      
+     }
+
+      
+    </style>
+
+    <script>
+      $(document).ready(function(){
+         $("#btn").click(function(){
+            
+            let titles=$("#title").val();
+            let units=$("#unit").val();
+            let patient_names=$("#Patient_Name").val();
+            let purposes=$("#Purpose").val();
+            let blood_groups=$("#Blood_Group").val();
+            let mobile_numbers=$("#Mobile_Number").val();
+            let ages=$("#Patient_Age").val();
+            let hos_Names=$("#Hospital_Name").val();
+            let dates=$("#date").val();
+            let Addresss=$("#Address").val();
+            let detailss=$("#Details").val();
+           
+            if(titles==""||units==""||patient_names==" "||purposes==" "||blood_groups==" "||mobile_numbers==" "||ages==" "||hos_Names==" "||dates==" "||Addresss==" "||detailss==" "){
+               alert("Please fill all the details.....");
+            }else{
+               $(".message").text("Thank you! Your request has been submitted.");
+            $(".message").css("border","1px solid black","width","300px");
+            }
+
+
+            
+         });
+         
+         
+      });
+
+    </script>
+</head>
+<body>
+   <div class="div1" style="background-color: lightgray;">
+      <div style="height:40px;color:red;font-size: 45px;">BloodBank.com</div>
+      <span style="height:10px;font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><i>A Social Intiative</i></b></span><br>
+      <marquee behavior="" direction="right"  scrollamount=10% style="color: rgb(231, 14, 14); font-size: larger;" ><b>GIVE BLOOD SAVE LIFE❤️❤️❤️</b> </marquee>
+   </div>
+   
+  <div id="aa">
+
+ 
+     <div class="image" >
+      <img src="./dhsu_j4ov_220606.jpg" alt="" width="350px" height="650px"  style="margin-left:150px ; margin-top: 20px;">
+
+     </div>
+   <div class="maindiv" >
+      <div id="heading">
+        <h2><strong>Request for blood</strong></h2>
+        <p>Please fill the following information to post your blood request.</p>
+      </div>
+         <div class="status">
+           <center><p class="message"></p></center> 
+         </div>
+            <form id="form" >
+               <section>
+                  <label for="title"><strong>Title</strong></label>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                  <label for="unit" style="margin-left: 140px;"><strong>Blood Unit/Bag(S)</strong></label><br>
+
+                  <input type="text" placeholder="Title" id="title" required>&nbsp&nbsp&nbsp&nbsp
+
+                  <input type="number" placeholder="Blood unit" id="unit" required>
+               </section>
+
+               <section>
+                     <label for="Patient_Name"><strong>Patient Name</strong></label>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+         
+                     <label for="Purpose" style="margin-left: 80px;"><strong>Purpose</strong></label><br>
+         
+                     <input type="text" placeholder="Patient_Name" id="Patient Name" >&nbsp&nbsp&nbsp&nbsp
+         
+                     <input type="text" placeholder="Purpose" id="Purpose">
+                  </section>
+
+               <section>
+                  <label for="Blood_Group" ><strong>Blood Group</strong></label>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+      
+                  <label for="Mobile_Number" style="margin-left: 82px;"><strong>Mobile Number</strong></label><br>
+      
+               <select name="Blood_Group" id="Blood_Group select" style="width: 206px;" required>
+                  <option value="">---- Select Group ----</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+               </select>&nbsp&nbsp&nbsp&nbsp
+      
+                  <input type="number" placeholder="Mobile Numbere" id="Mobile_Number" max="10">
+               </section>
+
+               <section>
+                  <label for="Patient_Age"><strong>Patient Age</strong></label>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+      
+                  <label for="Hospital_Name" style="margin-left: 92px;"><strong>Hospital Name</strong></label><br>
+      
+                  <input type="number" placeholder="Patient_Age" id="Patient_Age">&nbsp&nbsp&nbsp&nbsp
+      
+                  <input type="text" placeholder="Hospital Name" id="Hospital_Name">
+               </section> 
+
+               <section>
+                  <label for="date"><strong>When Need Blood ?</strong></label>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+      
+                  <label for="Country" style="margin-left: 35px;"><strong>Country</strong></label><br>
+      
+                  <input type="date" placeholder="When Need Blood ?" id="date" style="width: 200px;" >&nbsp&nbsp&nbsp&nbsp
+      
+                  <select name="Country" id="Country select" style="width: 206px;" >
+                     <option value="">---- Select Country ----</option>
+                     <option value="india">India</option>
+                  </select>
+               </section>
+
+               <section>
+                  <label for="state"><strong>State</strong></label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      
+      
+                  <label for="city" style="margin-left: 137px;"><strong>City</strong></label><br>
+
+                  <select name="State" id="state select" style="width: 206px;" >
+                     <option value="">---- Select State ----</option>
+                     <option value="Andhra Predesh">Andhra Predesh</option>
+                     <option value="TamilNadu">TamilNadu</option>
+                     <option value="kerala">Kerala</option>
+                     <option value="Telangana">Telangana</option>
+                  </select>&nbsp&nbsp&nbsp&nbsp
+      
+                  <input type="text" placeholder="City " id="city">
+      
+                  
+               </section>
+
+               <section>
+                  <label for="Address"><strong>Address</strong></label> <br> 
+      
+                  <input type="text" placeholder="Address" id="Address" style="width: 427px;"><br>
+
+                  <label for="Details"><strong>Details</strong></label><br>
+      
+                  <input type="text" placeholder="Details" id="Details" style="width: 427px;">
+               </section>
+            </form>
+
+         <div class="btn">
+         <center><input type="submit" id="btn" ></center>
+         </div>
+
+         <div class="homebtn"><a href="./home.html"><center><input type="button" value="Home Page" ></center></a></div>
+
+      </div>
+   </div>
+      
+</body>
+</html>

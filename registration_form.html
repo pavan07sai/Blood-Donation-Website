@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="icon" href="../HTML logo.png">
+    <script src="../code.jquery.com_jquery-3.7.1.min.js"></script>
+   
+    <!-- <script src="./javascript.js"></script> -->
+    <script src="../jqueryfile.js"></script>
+    <style>
+        body{
+            background-color: rgb(224, 232, 232);
+        }
+       .bb{
+        display: flex;
+         flex-direction: row;
+       }
+        .maindiv{
+            width:31% ;
+            background-color: antiquewhite;
+           position:absolute;
+           top: 50%;
+           left: 68%;
+           transform: translate(-50%,-50%);
+            padding-bottom :25px ;
+            border-radius: 5px;
+            border-style: groove;
+            box-shadow: 0px 0px 10px;
+            border-color:red ;
+        }
+        .maindiv input,label{
+            width: 200px;
+            margin-left: 15px;
+            height: 25px;
+            margin-top: 5px;
+            border-radius: 4px;
+
+        }
+        
+        }
+        .maindiv label{
+            font-size: large;
+            font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        h1{
+            color: red;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        .btn{
+            cursor: pointer;
+            border-radius: 5px;
+            
+        }
+        
+
+    </style>
+</head>
+<body >
+    <div class="bb">
+        <div class="img">
+            <img src="./pngkey.com-donation-png-1753871-1638x2048.png" alt="" width="550px" height="650px" style="margin-left: 150px; margin-top: 25px;">
+        </div>
+    <div class="maindiv">
+        <center> <h1>Registration Form</h1></center>
+        <center><img src="./donor-6488043_640.png" alt="" width="200px" height="100px" id="img"></center>
+        <form action="./loginpage.html" >
+            <div id="name">
+                <label for="firstn"> Name:</label><br>
+                <input type="text" placeholder="  First" id="firstn" required>
+                <input type="text" placeholder="  Last" id="lastn" required>
+            </div><br>
+
+            <div  >
+                <label for="date">Date Of Birth:</label> <label for="blood_group" style="margin-left: 28%;"> Blood Group:</label><br>
+                <input type="date" name="date" id="date" style="width: 200px;"  >
+                <select name="Blood_Group" id="Blood_Group select" style="width: 206px; margin-left: 4%; height: 30px;" required >
+                    <option value="">---- Select Group ----</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                 </select>
+            </div><br>
+            <div >
+                <label for="phone">Phone Number:</label><br>
+                <input type="number"  id="phone"  required autocomplete="on" style="width: 425px;">
+            </div><br>
+            <div >
+                <label for="email">Email:</label><br>
+                <input type="email"  id="email"  required autocomplete="on" style="width: 425px;">
+            </div><br>
+            <div >
+                <label for="uname">Username:</label><br>
+                <input type="text" id="uname"  required  style="width: 425px;">
+            </div><br>
+            <div >
+                <label for="password"> Password:</label><br>
+                <input type="password" placeholder="Password" id="password"   required>
+                <input type="text" placeholder="Conform Password" id="cpassword" required><br>
+                <p id="error"> </p>
+            </div><br>
+            <center><input type="submit" value="Register" id="btn" onsubmit="add_details()"></center>
+            
+        </form>
+        
+        
+    </div>
+</div>
+    
+</body>
+</html>
